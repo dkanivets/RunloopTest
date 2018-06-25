@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import ReactiveSwift
+import ReactiveCocoa
 
 class ViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
@@ -25,10 +27,14 @@ class ViewController: UIViewController {
         self.setTime()
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(setTime), userInfo: nil, repeats: true)
         nameLabel.text = "Dmitry"
-        
-        FeedItemsService.pullEntertainmentAndEnvironment().on(value: { items in
-            print(items)
-        }).start()
+
+        if let tabBarViewControllers = self.tabBarController?.viewControllers, let navigationControllerControllers = (tabBarViewControllers[1] as? UINavigationController)?.viewControllers, let feedItemsVC = navigationControllerControllers.first as? FeedsTableViewController {
+            feedItemsVC.viewModel.selectedFeed.signal.observeValues({ [weak self] value in
+                if let title = value?.title {
+                    self?.rssLabel.text = title
+                }
+            })
+        }
     }
     
     deinit {

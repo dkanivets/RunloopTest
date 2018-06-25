@@ -19,6 +19,9 @@
 		C71B4C0B20E181E400B67F6F /* FeedItemsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71B4C0A20E181E400B67F6F /* FeedItemsService.swift */; };
 		C71B4C0D20E1829400B67F6F /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71B4C0C20E1829400B67F6F /* FeedItem.swift */; };
 		C71B4C0F20E182DB00B67F6F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71B4C0E20E182DB00B67F6F /* Extensions.swift */; };
+		C71B4C1120E18FBA00B67F6F /* FeedsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71B4C1020E18FBA00B67F6F /* FeedsTableViewController.swift */; };
+		C71B4C1320E1900800B67F6F /* FeedsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71B4C1220E1900800B67F6F /* FeedsViewModel.swift */; };
+		C71B4C1520E195C700B67F6F /* FeedItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71B4C1420E195C700B67F6F /* FeedItemTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		C71B4C0A20E181E400B67F6F /* FeedItemsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemsService.swift; sourceTree = "<group>"; };
 		C71B4C0C20E1829400B67F6F /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
 		C71B4C0E20E182DB00B67F6F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		C71B4C1020E18FBA00B67F6F /* FeedsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsTableViewController.swift; sourceTree = "<group>"; };
+		C71B4C1220E1900800B67F6F /* FeedsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsViewModel.swift; sourceTree = "<group>"; };
+		C71B4C1420E195C700B67F6F /* FeedItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemTableViewCell.swift; sourceTree = "<group>"; };
 		CA6A7061E5DDC0928261B65C /* Pods-RunloopTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunloopTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RunloopTest/Pods-RunloopTest.debug.xcconfig"; sourceTree = "<group>"; };
 		D3268DDC64627AE418F2F072 /* Pods_RunloopTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RunloopTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC885CC81E4C37F4E5BA4893 /* Pods-RunloopTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunloopTestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RunloopTestTests/Pods-RunloopTestTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -99,6 +105,9 @@
 			children = (
 				0A3964DD20E0B0B500898F86 /* AppDelegate.swift */,
 				0A3964DF20E0B0B500898F86 /* ViewController.swift */,
+				C71B4C1020E18FBA00B67F6F /* FeedsTableViewController.swift */,
+				C71B4C1420E195C700B67F6F /* FeedItemTableViewCell.swift */,
+				C71B4C1220E1900800B67F6F /* FeedsViewModel.swift */,
 				0A3964FD20E0BA7400898F86 /* NetworkService.swift */,
 				C71B4C0C20E1829400B67F6F /* FeedItem.swift */,
 				C71B4C0A20E181E400B67F6F /* FeedItemsService.swift */,
@@ -315,10 +324,13 @@
 			files = (
 				C71B4C0B20E181E400B67F6F /* FeedItemsService.swift in Sources */,
 				C71B4C0F20E182DB00B67F6F /* Extensions.swift in Sources */,
+				C71B4C1320E1900800B67F6F /* FeedsViewModel.swift in Sources */,
 				0A3964E020E0B0B500898F86 /* ViewController.swift in Sources */,
+				C71B4C1120E18FBA00B67F6F /* FeedsTableViewController.swift in Sources */,
 				0A3964FE20E0BA7400898F86 /* NetworkService.swift in Sources */,
 				C71B4C0D20E1829400B67F6F /* FeedItem.swift in Sources */,
 				0A3964DE20E0B0B500898F86 /* AppDelegate.swift in Sources */,
+				C71B4C1520E195C700B67F6F /* FeedItemTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

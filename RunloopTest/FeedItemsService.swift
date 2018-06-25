@@ -10,7 +10,20 @@ import Foundation
 import ReactiveSwift
 import SWXMLHash
 
+enum FeedType: Int {
+    case business = 0, entertainmentEnvironment = 1
+}
+
 struct FeedItemsService {
+    
+    static var pullFeedAction: Action<FeedType, [FeedItem], NSError> = Action { feedType in
+        switch feedType {
+        case .business:
+            return FeedItemsService.pullBusinessFeed()
+        case .entertainmentEnvironment:
+            return FeedItemsService.pullEntertainmentAndEnvironmentFeed()
+        }
+    }
     
     static func pullBusinessFeed() -> SignalProducer<[FeedItem], NSError> {
         return NetworkService.business.xmlSignalProducer()
@@ -24,7 +37,7 @@ struct FeedItemsService {
         })
     }
 
-    static func pullEntertainmentAndEnvironment() -> SignalProducer<[FeedItem], NSError> {
+    static func pullEntertainmentAndEnvironmentFeed() -> SignalProducer<[FeedItem], NSError> {
         var arrayOfSignalProducers: [SignalProducer<XMLIndexer, NSError>] = []
         arrayOfSignalProducers.append(NetworkService.entertainment.xmlSignalProducer())
         arrayOfSignalProducers.append(NetworkService.environment.xmlSignalProducer())
