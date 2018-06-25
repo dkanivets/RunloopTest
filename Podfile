@@ -6,7 +6,8 @@ target 'RunloopTest' do
 	pod 'ReactiveCocoa'
     pod 'Alamofire'
     pod 'RealmSwift'
-
+    pod 'FeedKit'
+    
   target 'RunloopTestTests' do
     inherit! :search_paths
   end

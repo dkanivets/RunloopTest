@@ -13,6 +13,7 @@
 		0A3964E520E0B0B600898F86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A3964E420E0B0B600898F86 /* Assets.xcassets */; };
 		0A3964E820E0B0B600898F86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A3964E620E0B0B600898F86 /* LaunchScreen.storyboard */; };
 		0A3964F320E0B0B700898F86 /* RunloopTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3964F220E0B0B700898F86 /* RunloopTestTests.swift */; };
+		0A3964FE20E0BA7400898F86 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3964FD20E0BA7400898F86 /* NetworkService.swift */; };
 		235FE1DAE1C28F4369B17B1B /* Pods_RunloopTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3268DDC64627AE418F2F072 /* Pods_RunloopTest.framework */; };
 		752D1EA29C6B3F1D1F0D2C26 /* Pods_RunloopTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5CB8B92614883426FD54C8D /* Pods_RunloopTestTests.framework */; };
 /* End PBXBuildFile section */
@@ -38,6 +39,7 @@
 		0A3964EE20E0B0B700898F86 /* RunloopTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RunloopTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A3964F220E0B0B700898F86 /* RunloopTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunloopTestTests.swift; sourceTree = "<group>"; };
 		0A3964F420E0B0B700898F86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A3964FD20E0BA7400898F86 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		4EB1606D07962AB67FC68DCE /* Pods-RunloopTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunloopTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-RunloopTest/Pods-RunloopTest.release.xcconfig"; sourceTree = "<group>"; };
 		B2AC7DB709F01341DB39F60D /* Pods-RunloopTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunloopTestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RunloopTestTests/Pods-RunloopTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B5CB8B92614883426FD54C8D /* Pods_RunloopTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RunloopTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +93,7 @@
 			children = (
 				0A3964DD20E0B0B500898F86 /* AppDelegate.swift */,
 				0A3964DF20E0B0B500898F86 /* ViewController.swift */,
+				0A3964FD20E0BA7400898F86 /* NetworkService.swift */,
 				0A3964E120E0B0B500898F86 /* Main.storyboard */,
 				0A3964E420E0B0B600898F86 /* Assets.xcassets */,
 				0A3964E620E0B0B600898F86 /* LaunchScreen.storyboard */,
@@ -272,6 +275,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RunloopTest/Pods-RunloopTest-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/FeedKit/FeedKit.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
@@ -281,6 +285,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FeedKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
@@ -348,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A3964E020E0B0B500898F86 /* ViewController.swift in Sources */,
+				0A3964FE20E0BA7400898F86 /* NetworkService.swift in Sources */,
 				0A3964DE20E0B0B500898F86 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
