@@ -25,6 +25,10 @@ class ViewController: UIViewController {
         self.setTime()
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(setTime), userInfo: nil, repeats: true)
         nameLabel.text = "Dmitry"
+        
+        FeedItemsService.pullEntertainmentAndEnvironment().on(value: { items in
+            print(items)
+        }).start()
     }
     
     deinit {

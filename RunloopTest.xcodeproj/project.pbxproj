@@ -16,6 +16,9 @@
 		0A3964FE20E0BA7400898F86 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3964FD20E0BA7400898F86 /* NetworkService.swift */; };
 		235FE1DAE1C28F4369B17B1B /* Pods_RunloopTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3268DDC64627AE418F2F072 /* Pods_RunloopTest.framework */; };
 		752D1EA29C6B3F1D1F0D2C26 /* Pods_RunloopTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5CB8B92614883426FD54C8D /* Pods_RunloopTestTests.framework */; };
+		C71B4C0B20E181E400B67F6F /* FeedItemsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71B4C0A20E181E400B67F6F /* FeedItemsService.swift */; };
+		C71B4C0D20E1829400B67F6F /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71B4C0C20E1829400B67F6F /* FeedItem.swift */; };
+		C71B4C0F20E182DB00B67F6F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71B4C0E20E182DB00B67F6F /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,9 @@
 		4EB1606D07962AB67FC68DCE /* Pods-RunloopTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunloopTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-RunloopTest/Pods-RunloopTest.release.xcconfig"; sourceTree = "<group>"; };
 		B2AC7DB709F01341DB39F60D /* Pods-RunloopTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunloopTestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RunloopTestTests/Pods-RunloopTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B5CB8B92614883426FD54C8D /* Pods_RunloopTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RunloopTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C71B4C0A20E181E400B67F6F /* FeedItemsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemsService.swift; sourceTree = "<group>"; };
+		C71B4C0C20E1829400B67F6F /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
+		C71B4C0E20E182DB00B67F6F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CA6A7061E5DDC0928261B65C /* Pods-RunloopTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunloopTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RunloopTest/Pods-RunloopTest.debug.xcconfig"; sourceTree = "<group>"; };
 		D3268DDC64627AE418F2F072 /* Pods_RunloopTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RunloopTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC885CC81E4C37F4E5BA4893 /* Pods-RunloopTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunloopTestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RunloopTestTests/Pods-RunloopTestTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -94,6 +100,9 @@
 				0A3964DD20E0B0B500898F86 /* AppDelegate.swift */,
 				0A3964DF20E0B0B500898F86 /* ViewController.swift */,
 				0A3964FD20E0BA7400898F86 /* NetworkService.swift */,
+				C71B4C0C20E1829400B67F6F /* FeedItem.swift */,
+				C71B4C0A20E181E400B67F6F /* FeedItemsService.swift */,
+				C71B4C0E20E182DB00B67F6F /* Extensions.swift */,
 				0A3964E120E0B0B500898F86 /* Main.storyboard */,
 				0A3964E420E0B0B600898F86 /* Assets.xcassets */,
 				0A3964E620E0B0B600898F86 /* LaunchScreen.storyboard */,
@@ -143,7 +152,6 @@
 				0A3964D720E0B0B500898F86 /* Frameworks */,
 				0A3964D820E0B0B500898F86 /* Resources */,
 				84F3FBC4085D5CDD4E497C1B /* [CP] Embed Pods Frameworks */,
-				633E050023993D1F1D21456A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -162,8 +170,6 @@
 				0A3964EA20E0B0B700898F86 /* Sources */,
 				0A3964EB20E0B0B700898F86 /* Frameworks */,
 				0A3964EC20E0B0B700898F86 /* Resources */,
-				CF4BD764DB814AE10F6A4712 /* [CP] Embed Pods Frameworks */,
-				F1C51D32A9102A041425C395 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -234,21 +240,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		633E050023993D1F1D21456A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RunloopTest/Pods-RunloopTest-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		7570DF876AE67CDE61BA266D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -275,22 +266,22 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RunloopTest/Pods-RunloopTest-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/FeedKit/FeedKit.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SWXMLHash/SWXMLHash.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FeedKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWXMLHash.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -315,36 +306,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CF4BD764DB814AE10F6A4712 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RunloopTestTests/Pods-RunloopTestTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F1C51D32A9102A041425C395 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RunloopTestTests/Pods-RunloopTestTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -352,8 +313,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C71B4C0B20E181E400B67F6F /* FeedItemsService.swift in Sources */,
+				C71B4C0F20E182DB00B67F6F /* Extensions.swift in Sources */,
 				0A3964E020E0B0B500898F86 /* ViewController.swift in Sources */,
 				0A3964FE20E0BA7400898F86 /* NetworkService.swift in Sources */,
+				C71B4C0D20E1829400B67F6F /* FeedItem.swift in Sources */,
 				0A3964DE20E0B0B500898F86 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -518,7 +482,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 798XUQKJJ5;
 				INFOPLIST_FILE = RunloopTest/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dmitrykanivets.RunloopTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -534,7 +501,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 798XUQKJJ5;
 				INFOPLIST_FILE = RunloopTest/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dmitrykanivets.RunloopTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -551,7 +521,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 798XUQKJJ5;
 				INFOPLIST_FILE = RunloopTestTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dmitrykanivets.RunloopTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -569,7 +543,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 798XUQKJJ5;
 				INFOPLIST_FILE = RunloopTestTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dmitrykanivets.RunloopTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

@@ -10,27 +10,30 @@ import Foundation
 import Alamofire
 import ReactiveSwift
 import Result
+import SWXMLHash
 
 enum NetworkService {
-    private static let baseURL = "https://api.myjson.com/bins/"
+    private static let baseURL = "http://feeds.reuters.com/reuters/"
     
     case
-    matches,
-    results
+    business,
+    environment,
+    entertainment
     
     var path : (Alamofire.HTTPMethod, String) {
         switch self {
-        case .matches: return (.get, "bhxgt")
-        case .results: return (.get, "178c0d")
+        case .business:      return (.get, "businessNews")
+        case .entertainment: return (.get, "entertainment")
+        case .environment:   return (.get, "environment")
         }
     }
     
-    fileprivate func dataSignalProducer(_ parameters:[String : AnyObject] = [String: AnyObject]()) ->
+    fileprivate func dataSignalProducer() ->
         SignalProducer<(response: HTTPURLResponse, data: Data), NSError> {
             let (responseProducerSignal, observerResponse) = SignalProducer<(response: HTTPURLResponse, data: Data), NSError>.ProducedSignal.pipe()
             let responseProducer = SignalProducer(responseProducerSignal)
             
-            let alamofireRequest = Alamofire.request(NetworkService.baseURL + self.path.1, method: self.path.0, parameters: parameters)
+            let alamofireRequest = Alamofire.request(NetworkService.baseURL + self.path.1, method: self.path.0, parameters: nil)
             
             alamofireRequest.responseString { response in
                 print("REQUEST: \(response.request.debugDescription)")
@@ -50,10 +53,10 @@ enum NetworkService {
             return responseProducer
     }
     
-    func jsonSignalProducer(_ parameters:[String : AnyObject] = [String: AnyObject]()) -> SignalProducer<JSON, NSError> {
-        return self.dataSignalProducer(parameters)
+    func xmlSignalProducer() -> SignalProducer<XMLIndexer, NSError> {
+        return self.dataSignalProducer()
             .flatMap(FlattenStrategy.merge) { (response: HTTPURLResponse, data: Data) in
-                return self.serializedJsonProducer(data, encoding: CFStringConvertEncodingToNSStringEncoding(CFStringConvertIANACharSetNameToEncoding((response.textEncodingName ?? "utf-8") as CFString)))
+                return self.serializedXMLProducer(data)
             }
             .on (failed: {
                 print("---ERROR---\n\($0)\n-----------")
@@ -61,15 +64,12 @@ enum NetworkService {
         )
     }
     
-    fileprivate func serializedJsonProducer(_ data: Data, encoding: UInt) -> SignalProducer<JSON, NSError> {
+    fileprivate func serializedXMLProducer(_ data: Data) -> SignalProducer<XMLIndexer, NSError> {
         return SignalProducer { observer, _ in
-            do {
-                let nsJson: AnyObject = try JSONSerialization.jsonObject(with: data, options: []) as AnyObject
-                observer.send(value: JSON(nsJson))
+                let xml = SWXMLHash.parse(data)
+                
+                observer.send(value: xml)
                 observer.sendCompleted()
-            } catch _ {
-                print("Respose cant be parsed")
-            }
         }
     }
 }
