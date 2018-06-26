@@ -5,7 +5,6 @@ To setup project simply clone repository and open **.xcworspace* file. All depen
 ### Features
 
 * I tried to follow *MVVM* architecture with usage of **ReactiveCocoa**
-* No persistency implemented
 * The only complex algorithm that I can see here is concatenating responses from two RSS feeds. This was made with ReactiveCocoa, and can be scaled to concating as much feeds as needed, however I have left one FIXME mark there cause we need to keep order of topics, I've done this with sorting but it should be done in cleaner way with proper cocncatenation.
 
 ### What this app can do:
