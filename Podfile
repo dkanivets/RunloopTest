@@ -5,7 +5,6 @@ target 'RunloopTest' do
 
 	pod 'ReactiveCocoa'
     pod 'Alamofire'
-    pod 'RealmSwift'
     pod 'SWXMLHash'
 
     

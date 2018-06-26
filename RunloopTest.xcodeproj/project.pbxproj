@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0A3964DE20E0B0B500898F86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3964DD20E0B0B500898F86 /* AppDelegate.swift */; };
-		0A3964E020E0B0B500898F86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3964DF20E0B0B500898F86 /* ViewController.swift */; };
+		0A3964E020E0B0B500898F86 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3964DF20E0B0B500898F86 /* InitialViewController.swift */; };
 		0A3964E320E0B0B500898F86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A3964E120E0B0B500898F86 /* Main.storyboard */; };
 		0A3964E520E0B0B600898F86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A3964E420E0B0B600898F86 /* Assets.xcassets */; };
 		0A3964E820E0B0B600898F86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A3964E620E0B0B600898F86 /* LaunchScreen.storyboard */; };
 		0A3964F320E0B0B700898F86 /* RunloopTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3964F220E0B0B700898F86 /* RunloopTestTests.swift */; };
 		0A3964FE20E0BA7400898F86 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3964FD20E0BA7400898F86 /* NetworkService.swift */; };
+		0A54E6CD20E20AFA00EF7457 /* FeedItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A54E6CC20E20AFA00EF7457 /* FeedItemDetailViewController.swift */; };
 		235FE1DAE1C28F4369B17B1B /* Pods_RunloopTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3268DDC64627AE418F2F072 /* Pods_RunloopTest.framework */; };
 		752D1EA29C6B3F1D1F0D2C26 /* Pods_RunloopTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5CB8B92614883426FD54C8D /* Pods_RunloopTestTests.framework */; };
 		C71B4C0B20E181E400B67F6F /* FeedItemsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71B4C0A20E181E400B67F6F /* FeedItemsService.swift */; };
@@ -37,7 +38,7 @@
 /* Begin PBXFileReference section */
 		0A3964DA20E0B0B500898F86 /* RunloopTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunloopTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A3964DD20E0B0B500898F86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0A3964DF20E0B0B500898F86 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0A3964DF20E0B0B500898F86 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		0A3964E220E0B0B500898F86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0A3964E420E0B0B600898F86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A3964E720E0B0B600898F86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -46,6 +47,7 @@
 		0A3964F220E0B0B700898F86 /* RunloopTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunloopTestTests.swift; sourceTree = "<group>"; };
 		0A3964F420E0B0B700898F86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A3964FD20E0BA7400898F86 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		0A54E6CC20E20AFA00EF7457 /* FeedItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemDetailViewController.swift; sourceTree = "<group>"; };
 		4EB1606D07962AB67FC68DCE /* Pods-RunloopTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunloopTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-RunloopTest/Pods-RunloopTest.release.xcconfig"; sourceTree = "<group>"; };
 		B2AC7DB709F01341DB39F60D /* Pods-RunloopTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunloopTestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RunloopTestTests/Pods-RunloopTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B5CB8B92614883426FD54C8D /* Pods_RunloopTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RunloopTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,17 +106,15 @@
 			isa = PBXGroup;
 			children = (
 				0A3964DD20E0B0B500898F86 /* AppDelegate.swift */,
-				0A3964DF20E0B0B500898F86 /* ViewController.swift */,
-				C71B4C1020E18FBA00B67F6F /* FeedsTableViewController.swift */,
-				C71B4C1420E195C700B67F6F /* FeedItemTableViewCell.swift */,
-				C71B4C1220E1900800B67F6F /* FeedsViewModel.swift */,
-				0A3964FD20E0BA7400898F86 /* NetworkService.swift */,
-				C71B4C0C20E1829400B67F6F /* FeedItem.swift */,
-				C71B4C0A20E181E400B67F6F /* FeedItemsService.swift */,
 				C71B4C0E20E182DB00B67F6F /* Extensions.swift */,
+				0A54E6CA20E2046400EF7457 /* Services */,
+				0A54E6CB20E2047100EF7457 /* Models */,
+				0A54E6C920E2043100EF7457 /* InitialViewController */,
+				0A54E6C820E2042600EF7457 /* FeedsTableViewController */,
+				0A54E6CE20E20B0600EF7457 /* FeedItemDetailViewController */,
 				0A3964E120E0B0B500898F86 /* Main.storyboard */,
-				0A3964E420E0B0B600898F86 /* Assets.xcassets */,
 				0A3964E620E0B0B600898F86 /* LaunchScreen.storyboard */,
+				0A3964E420E0B0B600898F86 /* Assets.xcassets */,
 				0A3964E920E0B0B600898F86 /* Info.plist */,
 			);
 			path = RunloopTest;
@@ -127,6 +127,49 @@
 				0A3964F420E0B0B700898F86 /* Info.plist */,
 			);
 			path = RunloopTestTests;
+			sourceTree = "<group>";
+		};
+		0A54E6C820E2042600EF7457 /* FeedsTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C71B4C1020E18FBA00B67F6F /* FeedsTableViewController.swift */,
+				C71B4C1420E195C700B67F6F /* FeedItemTableViewCell.swift */,
+				C71B4C1220E1900800B67F6F /* FeedsViewModel.swift */,
+			);
+			path = FeedsTableViewController;
+			sourceTree = "<group>";
+		};
+		0A54E6C920E2043100EF7457 /* InitialViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0A3964DF20E0B0B500898F86 /* InitialViewController.swift */,
+			);
+			path = InitialViewController;
+			sourceTree = "<group>";
+		};
+		0A54E6CA20E2046400EF7457 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0A3964FD20E0BA7400898F86 /* NetworkService.swift */,
+				C71B4C0A20E181E400B67F6F /* FeedItemsService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		0A54E6CB20E2047100EF7457 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C71B4C0C20E1829400B67F6F /* FeedItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0A54E6CE20E20B0600EF7457 /* FeedItemDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0A54E6CC20E20AFA00EF7457 /* FeedItemDetailViewController.swift */,
+			);
+			path = FeedItemDetailViewController;
 			sourceTree = "<group>";
 		};
 		3B854CB5C6C64071F988045E /* Frameworks */ = {
@@ -161,6 +204,7 @@
 				0A3964D720E0B0B500898F86 /* Frameworks */,
 				0A3964D820E0B0B500898F86 /* Resources */,
 				84F3FBC4085D5CDD4E497C1B /* [CP] Embed Pods Frameworks */,
+				0732241D50B78194187F270E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -179,6 +223,8 @@
 				0A3964EA20E0B0B700898F86 /* Sources */,
 				0A3964EB20E0B0B700898F86 /* Frameworks */,
 				0A3964EC20E0B0B700898F86 /* Resources */,
+				EB5B6069B7F2876488A90256 /* [CP] Embed Pods Frameworks */,
+				07EC16D2BAD86A3ADD6FABD4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -249,6 +295,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0732241D50B78194187F270E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RunloopTest/Pods-RunloopTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		07EC16D2BAD86A3ADD6FABD4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RunloopTestTests/Pods-RunloopTestTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7570DF876AE67CDE61BA266D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -277,8 +353,6 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SWXMLHash/SWXMLHash.framework",
 			);
@@ -287,8 +361,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWXMLHash.framework",
 			);
@@ -315,6 +387,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		EB5B6069B7F2876488A90256 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RunloopTestTests/Pods-RunloopTestTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -324,8 +411,9 @@
 			files = (
 				C71B4C0B20E181E400B67F6F /* FeedItemsService.swift in Sources */,
 				C71B4C0F20E182DB00B67F6F /* Extensions.swift in Sources */,
+				0A54E6CD20E20AFA00EF7457 /* FeedItemDetailViewController.swift in Sources */,
 				C71B4C1320E1900800B67F6F /* FeedsViewModel.swift in Sources */,
-				0A3964E020E0B0B500898F86 /* ViewController.swift in Sources */,
+				0A3964E020E0B0B500898F86 /* InitialViewController.swift in Sources */,
 				C71B4C1120E18FBA00B67F6F /* FeedsTableViewController.swift in Sources */,
 				0A3964FE20E0BA7400898F86 /* NetworkService.swift in Sources */,
 				C71B4C0D20E1829400B67F6F /* FeedItem.swift in Sources */,
